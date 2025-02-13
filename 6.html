@@ -22,12 +22,6 @@
             font-size: 2.5em;
             margin-top: 20px;
         }
-        .countdown {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #d6336c;
-            margin-bottom: 20px; /* Adding margin to space it out from the bottom */
-        }
         .container {
             position: relative;
         }
@@ -37,19 +31,23 @@
             border-radius: 15px;
             margin-top: 30px;
         }
+        .countdown {
+            font-size: 2em;
+            font-weight: bold;
+            color: #d6336c;
+            margin-top: 20px; /* Adding space between image and countdown */
+        }
         .btn {
-            position: absolute;
-            left: 10%;
-            bottom: 10%;
-            padding: 15px 30px;
+            padding: 20px 50px; /* Increased padding for larger button */
             background-color: #dc3545;
             color: white;
-            font-size: 1.2em;
+            font-size: 1.5em; /* Larger font size */
             border: none;
             border-radius: 30px;
             cursor: pointer;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
             text-decoration: none;
+            margin-top: 30px; /* Adding space between countdown and button */
         }
         .btn:hover {
             background-color: #c82333;
@@ -64,15 +62,14 @@
     </style>
 </head>
 <body>
-    <h1>Valentine's Day Countdown</h1>
+    <h1>Hehe</h1>
     <div class="container">
         <img src="6.jpg" alt="Valentine's Image">
-        <!-- Link added to button -->
-        <a href="7.html" class="btn">Click here to receive your Valentine's gift</a>
+        <div class="countdown" id="countdown"></div> <!-- Countdown placed below image -->
     </div>
 
-    <!-- Countdown placed at the bottom -->
-    <div class="countdown" id="countdown"></div>
+    <!-- Gifts button placed below countdown -->
+    <a href="7.html" class="btn">Click here to receive your Valentine's gift</a>
 
     <script>
         // Set the date we're counting down to
