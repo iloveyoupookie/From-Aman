@@ -27,18 +27,43 @@
         .button-group {
             margin-top: 20px;
         }
+        .cute-button {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .cute-button:hover {
+            background-color: #ff3385;
+        }
     </style>
 </head>
 <body>
-    <audio autoplay loop>
+    <audio id="background-audio" loop>
         <source src="how_would_you_feel.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+
     <img src="1.jpg" alt="Romantic Image" class="img-fluid" style="max-width: 100%; height: auto;">
 
     <div class="button-group">
         <a href="2.html" class="romantic-button me-3">YES</a>
         <a href="3.html" class="romantic-button">NO</a>
     </div>
+
+    <!-- Cute Button to Play Audio -->
+    <button class="cute-button mt-4" onclick="playAudio()">Padhne se pehle click here</button>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('background-audio');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
