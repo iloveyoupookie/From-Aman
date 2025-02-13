@@ -12,6 +12,10 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         h1 {
             color: #d6336c;
@@ -22,6 +26,7 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #d6336c;
+            margin-bottom: 20px; /* Adding margin to space it out from the bottom */
         }
         .container {
             position: relative;
@@ -64,11 +69,10 @@
         <img src="6.jpg" alt="Valentine's Image">
         <!-- Link added to button -->
         <a href="7.html" class="btn">Click here to receive your Valentine's gift</a>
-        <div class="header">
-            <p>See you in</p>
-            <div class="countdown" id="countdown"></div>
-        </div>
     </div>
+
+    <!-- Countdown placed at the bottom -->
+    <div class="countdown" id="countdown"></div>
 
     <script>
         // Set the date we're counting down to
