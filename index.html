@@ -3,97 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Step</title>
+    <title>Romantic Buttons Page</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #ffe6e6;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
         }
-        .cute-text {
-            color: #ff4d4d;
-            font-size: 28px;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            margin-top: 20px;
-        }
-        .images-container {
-            margin-top: 10px;
-        }
-        .hehe-image {
-            max-width: 45%;
-            height: auto;
-            margin: 5px;
-        }
-        .next-button {
+        .romantic-button {
             background-color: #ff4d4d;
             color: white;
             border: none;
-            padding: 12px 25px;
+            padding: 12px 30px;
             border-radius: 30px;
             font-size: 18px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
             transition: background-color 0.3s ease;
+            text-decoration: none;
         }
-        .next-button:hover {
+        .romantic-button:hover {
             background-color: #ff1a1a;
+        }
+        .button-group {
+            margin-top: 20px;
+        }
+        .poem {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #ff4d4d;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            line-height: 1.6;
+            white-space: pre-line;
+        }
+        .fade-in-word {
+            opacity: 0;
+            display: inline;
+            animation: fadeIn 1.5s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .audio-button {
+            background-color: #ff99cc;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .audio-button:hover {
+            background-color: #ff6699;
         }
     </style>
 </head>
 <body>
-    <div class="container text-center">
-        <img src="5.png" alt="Image" class="img-fluid">
-    </div>
-    
-    <div class="cute-text">
-        Oh, my love, the queen of our domain,<br>
-        Who thrives on being the adult, yet drives me insane.<br>
-        A princess you are, with charm so rare,<br>
-        Except when I pull your hair (you asked, I swear!).<br><br>
+    <button class="audio-button" onclick="document.getElementById('bg-audio').play()">Padhne se pehle, Click here</button>
+    <audio id="bg-audio" loop>
+        <source src="how_would_you_feel.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-        You’re the adult in this circus, my guiding star,<br>
-        Yet still my princess, as perfect as you are.<br>
-        Dark chocolate with strawberries makes your day,<br>
-        While I sneak one and hope you’ll say, “That’s okay.”<br><br>
-
-        Your house is a temple, all neat and refined,<br>
-        While my socks on the floor make you lose your mind.<br>
-        You love when I play with your hair, just right,<br>
-        And then curl up for old movies late at night.<br><br>
-
-        You like your bed cold but cuddle all night,<br>
-        A fluffy blanket’s your fortress, snug and tight.<br>
-        Sleeping’s your hobby, spicy food your flair,<br>
-        Dhaniya chutney on chicken tikka? Oh, what a pair!<br><br>
-
-        Old movies and podcasts, your timeless muse,<br>
-        With murder mysteries, you’ll never lose.<br>
-        Quiet spaces, airy and grand,<br>
-        Big bathrooms too—now I understand!<br><br>
-
-        Coffee without sugar, some milk is fine,<br>
-        Shopping with agendas? Girl, that’s your line.<br>
-        An autorickshaw ride in the light rain we’ll share,<br>
-        Oversized T-shirts, your royal wear.<br><br>
-
-        Ice cream cones and Bihari bhoj,<br>
-        Sweet drinks? No thanks! That’s not your road.<br>
-        Adventurous by day, hanky-panky by night,<br>
-        MILF over granny? You’re always right!<br><br>
-
-        Talking to YOU is my favorite part,<br>
-        Saying "I love you" warms my heart.<br>
-        Oh, my darling, my laughter, my light,<br>
-        Life with you is a glorious delight.
-    </div>
-    
-    <div class="images-container">
-        <img src="hehe1.jpg" alt="Hehe Image 1" class="hehe-image">
-        <img src="hehe1.jpg" alt="Hehe Image 2" class="hehe-image">
+    <div class="poem" id="poem">
+        <!-- Poem content will be inserted here -->
     </div>
 
-    <a href="7.html" class="next-button">Ab click here <3</a>
+    <img src="1.jpg" alt="Romantic Image" class="img-fluid" style="max-width: 100%; height: auto; margin-top: 20px;">
+
+    <div class="button-group">
+        <a href="2.html" class="romantic-button me-3">YES</a>
+        <a href="3.html" class="romantic-button">NO</a>
+    </div>
+
+    <script>
+        const poemLines = [
+            'Oh, my love, the queen of our domain,',
+            'Who thrives on being the adult, yet drives me insane.',
+            'A princess you are, with charm so rare,',
+            'Except when I pull your hair (you asked, I swear!).',
+            '',
+            'You’re the adult in this circus, my guiding star,',
+            'Yet still my princess, as perfect as you are.',
+            'Dark chocolate with strawberries makes your day,',
+            'While I sneak one and hope you’ll say, “That’s okay.”',
+            '',
+            'Your house is a temple, all neat and refined,',
+            'While my socks on the floor make you lose your mind.',
+            'You love when I play with your hair, just right,',
+            'And then curl up for old movies late at night.',
+            '',
+            'You like your bed cold but cuddle all night,',
+            'A fluffy blanket’s your fortress, snug and tight.',
+            'Sleeping’s your hobby, spicy food your flair,',
+            'Dhaniya chutney on chicken tikka? Oh, what a pair!',
+            '',
+            'Old movies and podcasts, your timeless muse,',
+            'With murder mysteries, you’ll never lose.',
+            'Quiet spaces, airy and grand,',
+            'Big bathrooms too—now I understand!',
+            '',
+            'Coffee without sugar, some milk is fine,',
+            'Shopping with agendas? Girl, that’s your line.',
+            'An autorickshaw ride in the light rain we’ll share,',
+            'Oversized T-shirts, your royal wear.',
+            '',
+            'Ice cream cones and Bihari bhoj,',
+            'Sweet drinks? No thanks! That’s not your road.',
+            'Adventurous by day, hanky-panky by night,',
+            'MILF over granny? You’re always right!',
+            '',
+            'Talking to YOU is my favorite part,',
+            'Saying "I love you" warms my heart.',
+            'Oh, my darling, my laughter, my light,',
+            'Life with you is a glorious delight.'
+        ];
+
+        const poemContainer = document.getElementById('poem');
+
+        poemLines.forEach((line, index) => {
+            const lineContainer = document.createElement('div');
+            line.split(' ').forEach((word, wordIndex) => {
+                const span = document.createElement('span');
+                span.textContent = word + ' ';
+                span.classList.add('fade-in-word');
+                span.style.animationDelay = `${(index * 2 + wordIndex * 0.4)}s`;
+                lineContainer.appendChild(span);
+            });
+            poemContainer.appendChild(lineContainer);
+        });
+    </script>
 </body>
 </html>
